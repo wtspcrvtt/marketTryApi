@@ -1,4 +1,3 @@
-const loadBtn = document.getElementById('loadBtn');
 
 function loadProducts() {
     fetch('https://zalupa.kaizo.wtf/api/v1/products/')
@@ -23,6 +22,4 @@ function loadProducts() {
 };
 
 
-
-
-loadBtn.addEventListener('click', loadProducts);
+document.addEventListener('DOMContentLoaded', loadProducts());
