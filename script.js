@@ -16,6 +16,10 @@ function loadProducts() {
                 img.className = 'product-img';
                 img.src = product.image_url;
                 container.appendChild(img);
+                const price = document.createElement('div');
+                price.className = 'product-price';
+                price.textContent = product.price;
+                container.appendChild(price);
             };
         })
         .catch(error => console.error('Ошибка:', error))
