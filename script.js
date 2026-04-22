@@ -10,16 +10,19 @@ function loadProducts() {
                 const product = data.products[i];
                 const card = document.createElement('div');
                 card.className = 'product-card';
-                card.textContent = product.title;
-                container.appendChild(card);
                 const img = document.createElement('img');
                 img.className = 'product-img';
                 img.src = product.image_url;
-                container.appendChild(img);
                 const price = document.createElement('div');
                 price.className = 'product-price';
                 price.textContent = product.price;
-                container.appendChild(price);
+                const title = document.createElement('h3');
+                title.className = 'product-title';
+                title.textContent = product.title;
+                card.appendChild(title);
+                card.appendChild(img);
+                card.appendChild(price);
+                container.appendChild(card);
             };
         })
         .catch(error => console.error('Ошибка:', error))
