@@ -19,6 +19,9 @@ function loadProducts() {
                 const title = document.createElement('h3');
                 title.className = 'product-title';
                 title.textContent = product.title;
+                if (product.is_active === false) {
+                    card.classList.add('inactive');
+                }
                 card.appendChild(title);
                 card.appendChild(img);
                 card.appendChild(price);
@@ -52,8 +55,8 @@ function loadProductsDetail(id) {
 
 const backBtn = document.getElementById('back-btn');
 
-document.addEventListener('DOMContentLoaded', loadProducts);
 backBtn.addEventListener('click', () => {
+    document.addEventListener('DOMContentLoaded', loadProducts);
     document.getElementById('container-products').style.display = 'block';
     document.getElementById('product-detail').style.display = 'none';
 });
