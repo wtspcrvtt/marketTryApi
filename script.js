@@ -56,7 +56,8 @@ function loadProductsDetail(id) {
 const backBtn = document.getElementById('back-btn');
 
 backBtn.addEventListener('click', () => {
-    document.addEventListener('DOMContentLoaded', loadProducts);
     document.getElementById('container-products').style.display = 'block';
     document.getElementById('product-detail').style.display = 'none';
 });
+
+document.addEventListener('DOMContentLoaded', loadProducts);
