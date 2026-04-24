@@ -60,4 +60,4 @@ backBtn.addEventListener('click', () => {
     document.getElementById('product-detail').style.display = 'none';
 });
 
-document.addEventListener('DOMContentLoaded', loadProducts);
+document.addEventListener('DOMContentLoaded', loadProducts());
