@@ -26,6 +26,7 @@ function loadProducts() {
                 card.appendChild(title);
                 card.appendChild(price);
                 container.appendChild(card);
+                document.getElementById('back-btn').style.display = 'none';
                 card.dataset.id = product.id;
                 card.addEventListener('click', () => {
                     loadProductsDetail(product.id);
@@ -50,6 +51,7 @@ function loadProductsDetail(id) {
             productInf.textContent = data.description;
             document.getElementById('container-products').style.display = 'none';
             document.getElementById('product-detail').style.display = 'block';
+            document.getElementById('back-btn').style.display = 'block';
         })
 };
 
