@@ -50,7 +50,7 @@ function loadProductsDetail(id) {
             productPrice.textContent = data.price;
             productInf.textContent = data.description;
             document.getElementById('container-products').style.display = 'none';
-            document.getElementById('product-detail').style.display = 'block';
+            document.getElementById('product-detail').style.display = 'flex';
             document.getElementById('back-btn').style.display = 'block';
         })
 };
